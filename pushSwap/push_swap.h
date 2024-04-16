@@ -35,12 +35,20 @@ typedef struct s_stuck
 } t_stuck;
 
 
+
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
+int   ft_atoi(const char *str);
+
 char	**ft_split(char const *s, char c);
 
 size_t	ft_strlen(const char *s);
+
+void  ft_error(void);
+void  ft_create_stuck(t_stuck *st);
+void  ft_sort_args(t_stuck *st);
+void  ft_index(t_stuck *st);
 
 #endif

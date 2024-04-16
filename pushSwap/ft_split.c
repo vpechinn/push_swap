@@ -91,3 +91,9 @@ char	**ft_split(char const *s, char c)
 	array = ft_str(s, c, i);
 	return (array);
 }
+
+void  ft_error(void)
+{
+  write(1, "Error\n", 6);
+  exit(1);
+}
