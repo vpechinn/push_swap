@@ -2,7 +2,7 @@
 
 void  ft_index(t_stuck *st)
 {
- int		i;
+  int		i;
 	t_list	*tmp;
 
 	tmp = st->a;

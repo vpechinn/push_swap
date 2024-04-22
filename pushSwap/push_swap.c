@@ -73,12 +73,25 @@ int	main(int ac, char *av[])
   ft_create_stuck(&st);
   ft_sort_args(&st);
   ft_index(&st);
+  if (st.len <= 3)
+    ft_sort_three(&st);
+  else if (st.len <= 5)
+    ft_sort_five(&st);
+  else
+    ft_big_sort(&st);
   int i = 0;
   printf("%s\n", st.str);
-  // while (i < 10)
+  while (i < st.len)
+  {
+    printf("%d=%d\n", st.a->num, st.a->idx);
+    st.a = st.a->next;
+    i++;
+  }
+  // i = 0;
+  // while (i < 5)
   // {
-  //   printf("%d=%d\n", st.a->num, st.a->idx);
-  //   st.a = st.a->next;
+  //   printf("%d=%d\n", st.b->num, st.b->idx);
+  //   st.b = st.b->next;
   //   i++;
   // }
   // while (i < 10)
